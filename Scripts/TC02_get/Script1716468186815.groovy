@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('HomeAPI/post_Add_first_basket'))
+response = WS.sendRequest(findTestObject('MyAccountAPI/get_account'))
 
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyElementPropertyValue(response, 'injector_basename', 'sodar2')
 
